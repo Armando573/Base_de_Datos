@@ -56,3 +56,7 @@ CREATE TABLE camion_camionero (
   FOREIGN KEY (dni2) REFERENCES camionero (dni),
   FOREIGN KEY (matricula1) REFERENCES camion(matricula)
   );
+
+
+Link
+https://www.db-fiddle.com/f/xyMdiiAhi6hwpXzAnY6BPe/0
