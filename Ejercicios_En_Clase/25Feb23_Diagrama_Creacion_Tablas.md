@@ -49,4 +49,10 @@ CREATE TABLE paquetes (
                     );
                     
 
-                
+/* Creamos la tabla intermedia */
+CREATE TABLE camion_camionero (  
+  dni2 int,
+  matricula1 varchar (6),
+  FOREIGN KEY (dni2) REFERENCES camionero (dni),
+  FOREIGN KEY (matricula1) REFERENCES camion(matricula)
+  );
