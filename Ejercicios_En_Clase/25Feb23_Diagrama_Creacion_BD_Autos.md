@@ -9,3 +9,75 @@ cambio de aceite, si se ha hecho cambio de frenos u otros. Los coches pueden pas
 
 
 ![image](https://user-images.githubusercontent.com/61428623/221386328-b62f02b7-d59a-42aa-a72f-a4f43a361dd8.png)
+
+
+*****PENDIENTE POR TERMINAR******
+/* Crea la tabla */
+CREATE DATABASE ventas; 
+
+/* Indica que BD se utilizara */
+USE ventas; 
+
+
+
+/* Crea la tabla */
+CREATE TABLE cliente (  
+  id_cliente int PRIMARY KEY,
+  direccion varchar (50) NOT NULL,
+  ciudad varchar (30) not null,
+  nif varchar (10),
+  numero_telefono char (10)
+                    );
+
+
+
+/* Crea la tabla */
+CREATE TABLE concesionario (  
+  id_revision varchar (6) PRIMARY KEY,
+  cambio_aceite varchar (20) NOT NULL,
+  cambio_filtro int,
+  cambio_frenos int unsigned,
+  otros varchar (20)
+                    );
+
+
+
+/* Crea la tabla */
+CREATE TABLE autos (  
+  id_matricula varchar (6) PRIMARY KEY,
+  marca varchar (20) NOT NULL,
+  modelo int,
+  precio int unsigned,
+  color varchar (20)
+                    );
+
+
+
+
+
+/* CREAMOS TABLAS CON DEPENDENCIAS*/
+/* Crea la tabla */
+CREATE TABLE autos (  
+  id_matricula varchar (6) PRIMARY KEY,
+  marca varchar (20) NOT NULL,
+  modelo int,
+  precio int unsigned,
+  color varchar (20)
+  /* se declara el atributo*/
+  dni1 INT,
+  codigo_provincia1 varchar (10),
+  /* Referencia a donde es clave primaria*/
+  FOREIGN KEY (dni1) REFERENCES camionero(dni),
+  FOREIGN KEY (codigo_provincia1) REFERENCES provincia(codigo_provincia)
+                    );
+                    
+
+/* Creamos la tabla intermedia */
+CREATE TABLE cliente_consesionario (  
+  dni2 int,
+  matricula1 varchar (6),
+  FOREIGN KEY (dni2) REFERENCES camionero (dni),
+  FOREIGN KEY (matricula1) REFERENCES camion(matricula)
+  );
+  
+
