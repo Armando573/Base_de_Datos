@@ -1,4 +1,9 @@
- CREATE DATABASE biblioteca;
+
+***** En este link ya esta creada la BD para utilizarla *****
+https://www.db-fiddle.com/f/47A4JKQtiBuipMvAw6jucF/0
+
+
+CREATE DATABASE biblioteca;
  USE biblioteca;
 CREATE TABLE autores (
 id_autor VARCHAR(100) PRIMARY KEY,
