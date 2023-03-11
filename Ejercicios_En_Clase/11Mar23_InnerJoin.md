@@ -93,4 +93,5 @@ INSERT INTO auto_lib VALUES ('aut4',03);
 
 ![image](https://user-images.githubusercontent.com/61428623/224512178-9e17f772-d79e-49d6-91bf-86de7c65fec6.png)
 
+![image](https://user-images.githubusercontent.com/61428623/224512514-6b41d18f-22a3-496a-8d0d-e3f780e8bc41.png)
 
