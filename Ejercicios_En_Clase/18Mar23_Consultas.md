@@ -15,3 +15,9 @@ Select nom_prod, nom_clie, cant from producto
 inner join nota on nota.clave_prod1 = producto.clave_prod
 inner join cliente on cliente.clave_clie = nota.clave_clie1;
 
+
+Update nota
+inner join producto on producto.clave_prod = nota.clave_prod1
+set subtot = cant * precio;
+
+select folio, clave_prod1, clave_clie1, cant, FORMAT (subtot,2) AS Subtotal from nota;
