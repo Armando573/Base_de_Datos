@@ -27,3 +27,5 @@ set total = (iva * subtot) + subtot ;
 select folio, clave_prod1, clave_clie1, cant, FORMAT (subtot,2) AS Subtotal, iva, FORMAT(total,2) AS TOTAL from nota;
 
 
+Ejercico 7 Moodle
+https://www.db-fiddle.com/f/nziCcdRFufkjjsUUVrRVW7/2
